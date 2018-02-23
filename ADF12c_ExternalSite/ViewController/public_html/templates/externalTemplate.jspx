@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:panelHeader text="#{attrs.header}" id="pt_ph1">
+            <f:facet name="context"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="menuBar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+            <af:outputText value="#{attrs.title}" id="pt_ot1"/>
+        </af:panelHeader>
+        <af:panelSplitter id="pt_ps1">
+            <f:facet name="first">
+                <af:facetRef facetName="menu"/>
+            </f:facet>
+            <f:facet name="second">
+                <af:facetRef facetName="content"/>
+            </f:facet>
+        </af:panelSplitter>
+        <af:panelGroupLayout id="pt_pgl1">
+            <af:outputText value="#{attrs.footer}" id="pt_ot2"/>
+        </af:panelGroupLayout>
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <description>
+                    Website External Template
+                </description>
+                <display-name>
+                    externalTemplate
+                </display-name>
+                <facet>
+                    <facet-name>
+                        header
+                    </facet-name>
+                </facet>
+                <facet>
+                    <facet-name>
+                        content
+                    </facet-name>
+                </facet>
+                <facet>
+                    <facet-name>
+                        footer
+                    </facet-name>
+                </facet>
+                <facet>
+                    <facet-name>
+                        menu
+                    </facet-name>
+                </facet>
+                <attribute>
+                    <attribute-name>
+                        header
+                    </attribute-name>
+                    <attribute-class>
+                        java.lang.String
+                    </attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>
+                        title
+                    </attribute-name>
+                    <attribute-class>
+                        java.lang.String
+                    </attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>
+                        footer
+                    </attribute-name>
+                    <attribute-class>
+                        java.lang.String
+                    </attribute-class>
+                </attribute>
+            </component>
+        </af:xmlContent>
+    </af:pageTemplateDef>
+</jsp:root>
